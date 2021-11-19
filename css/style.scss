@@ -1,5 +1,42 @@
-body{
-    .bike-navbar{
-        background-color: #00C2BA;
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+body {
+    font-family: "Noto Sans TC";
+    .bike-navbar {
+        background-color: #00c2ba;
+        padding-left: 25px;
+        padding-right: 25px;
+        .bike-toggler{
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+        }
+        .bike-collapse {
+            .bike-nav {
+                width: 100%;
+                justify-content: space-between;
+                .bike-flex{
+                    display: flex;
+                    @media (max-width: 991px) {
+                        display: block;
+                    }
+                    .bike-link {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 24px;
+                        text-align: center;
+                        letter-spacing: 0.01em;
+                        color: #ffffff;
+                    }
+                }
+
+            }
+        }
+    }
+    .bike-container {
+        .bike-map {
+            @include size(100%, calc(98vh - 40px));
+        }
     }
 }
