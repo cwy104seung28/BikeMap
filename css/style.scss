@@ -8,7 +8,7 @@ body {
         background-color: #00c2ba;
         padding-left: 25px;
         padding-right: 25px;
-        .bike-toggler{
+        .bike-toggler {
             border: 1px solid #ffffff;
             border-radius: 5px;
         }
@@ -16,7 +16,7 @@ body {
             .bike-nav {
                 width: 100%;
                 justify-content: space-between;
-                .bike-flex{
+                .bike-flex {
                     display: flex;
                     @media (max-width: 991px) {
                         display: block;
@@ -30,13 +30,66 @@ body {
                         color: #ffffff;
                     }
                 }
-
             }
         }
     }
     .bike-container {
+        position: relative;
         .bike-map {
             @include size(100%, calc(98vh - 40px));
         }
+        .bike-destination {
+            position: absolute;
+            @include size(360px, 350px);
+            left: 22px;
+            top: 116px;
+            background: #fbffff;
+            box-shadow: 0px 4px 20px rgba(62, 62, 62, 0.1);
+            border-radius: 2px;
+            z-index: 1000;
+            .title {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .text {
+                display: block;
+                @include size(325px, 60px);
+                // left: 38px;
+                // top: 226px;
+                background: rgba(82, 164, 223, 0.19);
+                border-radius: 2px;
+                margin: auto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 26px;
+                padding-left: 8px;
+                padding-right: 8px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .submit {
+                display: block;
+                // position: absolute;
+                @include size(130px, 40px);
+                // left: 225px;
+                // top: 385px;
+                background: #00c2ba;
+                border-radius: 2px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 29px;
+                color: #ffffff;
+                margin-top: 100px;
+                margin-left: 210px;
+            }
+        }
+    }
+    input {
+        border: none;
+        box-shadow: none;
     }
 }
