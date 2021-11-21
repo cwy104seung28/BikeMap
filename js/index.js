@@ -14,6 +14,7 @@ function getAuthorizationHeader() {
 function cityResponse() {
     let city = document.getElementById('text').value;
     console.log(city);
+    
 }
 cityResponse();
 function mapResponse() {
