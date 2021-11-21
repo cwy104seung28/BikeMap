@@ -18,7 +18,7 @@ function cityResponse() {
 cityResponse();
 function mapResponse() {
     axios.get(
-        'https://ptx.transportdata.tw/MOTC/v2/Bike/Station/Taichung?$format=JSON',
+        'https://ptx.transportdata.tw/MOTC/v2/Bike/Station/Taichung?$top=100&$format=JSON',
 
         {
             headers: getAuthorizationHeader()
